@@ -23,5 +23,11 @@ public class BoardServiceImpl implements BoardService{
         
         return boardMapper.getList();
     }
+
+    @Override
+    public BoardVO getContent(BoardVO bid) {
+        return boardMapper.getContent(bid);
+    }
+    
     
 }

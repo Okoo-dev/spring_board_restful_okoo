@@ -12,7 +12,14 @@
    ]]>
 	</select>
 
-	
+	<select id="getContent" resultType="edu.bit.ex.vo.BoardVO">
+   <![CDATA[
+      SELECT bId, bName, bTitle, bContent, bDate, bHit, bGroup, bStep, bIndent 
+      FROM mvc_board 
+      WHERE bId = #{bid}
+   ]]>
+	</select>
+
 
 </mapper>
 
