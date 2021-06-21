@@ -20,7 +20,6 @@ public class BoardServiceImpl implements BoardService{
     @Override
     public List<BoardVO> getList() {
         log.info("getList()..");
-        
         return boardMapper.getList();
     }
 
@@ -28,6 +27,12 @@ public class BoardServiceImpl implements BoardService{
     public BoardVO getContent(BoardVO bid) {
         return boardMapper.getContent(bid);
     }
-    
+
+    @Override
+    public void remove(int bid) {
+        boardMapper.delete(bid);
+    }
+
+
     
 }

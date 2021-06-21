@@ -34,8 +34,14 @@ public class RestBoardSpring4AfterController {
 	    return list;
 	}
     
+    @GetMapping("/rest/modify")
+    public BoardVO delete(BoardVO bid) {
+        
+        return bid;
+    }
+    
     @GetMapping("/rest/{bid}")
-    public BoardVO restAfter55(Model model, BoardVO bid){
+    public BoardVO restAfter55(BoardVO bid){
         
         BoardVO list = boardService.getContent(bid);
         
