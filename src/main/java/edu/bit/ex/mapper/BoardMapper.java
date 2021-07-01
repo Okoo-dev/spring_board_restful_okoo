@@ -12,9 +12,14 @@ public interface BoardMapper {
     
     public List<BoardVO> getList();
 
-    public BoardVO getContent(BoardVO bid);
+    public BoardVO getContent(int bid);
+    
+    public int delete(int bid);
 
-    public void delete(int bid);
+    public void update(BoardVO boardVO);
+
+
+   
     
     
 }

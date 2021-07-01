@@ -14,7 +14,7 @@
 
 	<select id="getContent" resultType="edu.bit.ex.vo.BoardVO">
    <![CDATA[
-      SELECT bId, bName, bTitle, bContent, bDate, bHit, bGroup, bStep, bIndent 
+      SELECT * 
       FROM mvc_board 
       WHERE bId = #{bid}
    ]]>
@@ -25,6 +25,12 @@
   		 	delete from mvc_board where bid = #{bid}
   		 ]]>
 	</delete>
+	
+	<update id="update">
+     <![CDATA[
+       update mvc_board set bname = #{bname}, btitle = #{btitle}, bcontent = #{bcontent} where bid = #{bid}
+     ]]>
+   </update>
 	
 </mapper>
 

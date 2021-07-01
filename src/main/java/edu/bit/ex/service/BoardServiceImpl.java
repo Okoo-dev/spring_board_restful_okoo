@@ -23,15 +23,28 @@ public class BoardServiceImpl implements BoardService{
         return boardMapper.getList();
     }
 
+
     @Override
-    public BoardVO getContent(BoardVO bid) {
-        return boardMapper.getContent(bid);
+    public int remove(int bid) {
+        return boardMapper.delete(bid);
     }
 
     @Override
-    public void remove(int bid) {
-        boardMapper.delete(bid);
+    public void modify(BoardVO boardVO) {
+        boardMapper.update(boardVO);
     }
+
+
+    @Override
+    public BoardVO get(int bid) {
+        return boardMapper.getContent(bid);
+    }
+
+
+
+
+
+    
 
 
     

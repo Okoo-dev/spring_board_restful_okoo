@@ -43,7 +43,7 @@ public class RestBoardSpring4AfterController {
     @GetMapping("/rest/{bid}")
     public BoardVO restAfter55(BoardVO bid){
         
-        BoardVO list = boardService.getContent(bid);
+        BoardVO list = boardService.get(bid.getBid());
         
         
         return list;

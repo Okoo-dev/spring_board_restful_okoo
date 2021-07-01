@@ -9,9 +9,14 @@ public interface BoardService {
     
     public List<BoardVO> getList();
     
-    public BoardVO getContent(BoardVO bid);
+    public BoardVO get(int bid);
+    
+    public int remove(int bid);
 
-    public void remove(int bid);
+    public void modify(BoardVO boardVO);
+
+
+    
 
 
 
